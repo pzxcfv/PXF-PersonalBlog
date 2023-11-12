@@ -17,7 +17,7 @@
 - 后端：IntelliJ IDEA 2023.2.5 (Ultimate Edition)
 
 
-- 前端：Web Storm (Ultimate Edition)
+- 前端：Web Storm 2023.2.4 (Ultimate Edition)
 
 - Redis：Another Redis Desktop Manager
 
