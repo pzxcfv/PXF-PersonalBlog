@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blog.personalblog.mapper.ArticleMapper">
+    <update id="updateArticle">
+        update article
+        <set>
+            <if test="title !=null and title !=''">
+                 title=#{title},
+            </if>
+            <if test="content !=null and content !=''">
+                content=#{content},
+            </if>
+            <if test="coverImg !=null and coverImg !=''">
+                cover_img=#{coverImg},
+            </if>
+            <if test="state !=null and state !=''">
+                state=#{state},
+            </if>
+            <if test="categoryId !=null and state !=''">
+                category_id=#{categoryId},
+            </if>
+            update_time=now()
+        </set>
+        <where>
+            id=#{id}
+        </where>
+    </update>
+    <!--动态sql-->
+    <select id="articleList" resultType="com.blog.personalblog.pojo.Article">
+        select * from article
+        <where>
+            <if test="categoryId!=null">
+                category_id=#{categoryId}
+            </if>
+
+            <if test="state!=null">
+                and state=#{state}
+            </if>
+
+            and create_user=#{userId}
+        </where>
+    </select>
+</mapper>
