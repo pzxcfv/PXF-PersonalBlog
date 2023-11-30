@@ -13,13 +13,13 @@ public class AliyunOssTest {
 
     public static void main(String[] args) throws Exception {
         String endpoint = "https://oss-cn-chengdu.aliyuncs.com";
-        // 从环境变量中获取访问凭证。运行本代码示例之前，请确保已设置环境变量OSS_ACCESS_KEY_ID和OSS_ACCESS_KEY_SECRET。
+        // 从环境变量中获取访问凭证。
         //EnvironmentVariableCredentialsProvider credentialsProvider = CredentialsProviderFactory.newEnvironmentVariableCredentialsProvider();
         String ACCESS_KEY_ID="";
         String ACCESS_KEY_SECRET="";
         // 填写Bucket名称，例如examplebucket。
         String bucketName = "";
-        // 填写Object完整路径，完整路径中不能包含Bucket名称，例如exampledir/exampleobject.txt。
+        // 填写Object完整路径，完整路径中不能包含Bucket名称
         String objectName = "01.png";
 
         // 创建OSSClient实例。
@@ -32,7 +32,7 @@ public class AliyunOssTest {
             // 创建PutObjectRequest对象。
             PutObjectRequest putObjectRequest = new PutObjectRequest(bucketName, objectName, new FileInputStream("C:\\Users\\asus\\Desktop\\dongli\\01.png"));
 
-            // 如果需要上传时设置存储类型和访问权限，请参考以下示例代码。
+            // 如果需要上传时设置存储类型和访问权限
             // ObjectMetadata metadata = new ObjectMetadata();
             // metadata.setHeader(OSSHeaders.OSS_STORAGE_CLASS, StorageClass.Standard.toString());
             // metadata.setObjectAcl(CannedAccessControlList.Private);
