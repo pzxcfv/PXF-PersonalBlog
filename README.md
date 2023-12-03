@@ -10,7 +10,7 @@
 - **Element-plus**：异步函数库，处理HTTP请求。
 - **Pinia**：状态管理，维护应用的状态。
 - **Axios**：异步函数库，处理HTTP请求。
-- **Webpack**：JavaScript模块打包工具
+- **Vite**：JavaScript模块打包工具
 
 ## 开发工具
 
