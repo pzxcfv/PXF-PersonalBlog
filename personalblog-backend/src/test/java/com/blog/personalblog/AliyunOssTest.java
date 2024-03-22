@@ -12,7 +12,7 @@ import java.io.FileInputStream;
 public class AliyunOssTest {
 
     public static void main(String[] args) throws Exception {
-        String endpoint = "https://oss-cn-chengdu.aliyuncs.com";
+        String endpoint = "";
         // 从环境变量中获取访问凭证。
         //EnvironmentVariableCredentialsProvider credentialsProvider = CredentialsProviderFactory.newEnvironmentVariableCredentialsProvider();
         String ACCESS_KEY_ID="";
